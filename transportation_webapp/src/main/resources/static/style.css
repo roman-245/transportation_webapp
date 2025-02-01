@@ -1,0 +1,19 @@
+.gist {
+    border: 1px solid red;
+}
+
+.highlight {
+    border: 1px solid red;
+}
+
+.blog__title {
+    position: fixed;
+    top: 100px;
+    right: 50px;
+    text-decoration: none;
+    color: black;
+}
+
+.blog__title:hover {
+    color: blueviolet;
+}

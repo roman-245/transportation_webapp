@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html" lang="ru">
+<head>
+    <title>Административная панель блога</title>
+    <link rel="stylesheet" href="/style_admin_blog.css">
+</head>
+<body>
+<h1>Административная панель блога</h1>
+<ul>
+    <li><a href="/blog_home">Главная страница блога</a></li>
+</ul>
+<a href="/blog_admin/new">Добавить новую запись</a>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Название</th>
+        <th>Дата публикации</th>
+        <th>Автор</th>
+        <th>Действия</th>
+    </tr>
+    </thead>
+    <tbody>
+    <th:block th:each="post : ${listArticle}">
+        <tr>
+            <td th:text="${post.id}"></td>
+            <td th:text="${post.title}"></td>
+            <td th:text="${post.publishDate}"></td>
+            <td th:text="${post.author}"></td>
+            <td>
+                <a th:href="@{/blog_admin/edit/{id}(id=${post.id})}" onclick="return confirm('Редактировать запись?')">Редактировать</a>
+                <a th:href="@{/blog_admin/delete/{id}(id=${post.id})}" onclick="return confirm('Удалить запись?')">Удалить</a>
+            </td>
+        </tr>
+    </th:block>
+    </tbody>
+</table>
+<p class="text-white">
+    <script type="text/javascript">
+        function getRowsColumn() {
+            let table = document.getElementById('1')
+            let tBody = table.querySelector('tbody')
+            const count = tBody.querySelectorAll('tr').length
+            document.write('Количество статей в таблице: ' + count)
+        }
+
+        getRowsColumn()
+    </script>
+</p>
+</body>
+</html>

@@ -1,0 +1,28 @@
+body {
+    background-image: url('https://southafrica.savinodelbene.com/wp-content/uploads/2021/10/transportation-logistics-container-cargo-ship-cargo-plane-3d-rendering-illustration-scaled.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    overflow: auto;
+    color: white;
+}
+.container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+}
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.form-group label {
+    font-weight: bold;
+}
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html" lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Статья</title>
+  <link rel="stylesheet" href="/style_blog_full_article.css">
+</head>
+<body>
+  <div class="marker">
+    <p th:text="${article.id}"></p>
+    <h2 th:text="${article.title}"></h2>
+    <h1 th:text="${article.author}"></h1>
+    <p th:text="${article.publishDate}"></p>
+    <p th:text="${article.maintext}"></p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.blog {
+    color: #333;
+}
+
+.marker {
+    border: 2px solid red;
+}
+
+.blog__title_center {
+
+}
+
+.article {
+    display: flex;
+    justify-content: stretch;
+}
+
+.article__text {
+    max-height: 107px;
+    overflow: hidden;
+}
+
+.article__image {
+    margin-right: 20px;
+}
+
+.article__image_correct_size {
+    width: 600px;
+    height: 300px;
+}
+
+.article__redirect-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.article__redirect-button:hover {
+    background-color: #0003b3;
+    text-decoration: none;
+}
+
+.article__text-images {
+    display: flex;
+    flex-direction: row;
+    margin-left: 40px;
+    margin-top: 13px;
+    gap: 10px;
+}
+
+.two-blocs {
+    display: flex;
+    flex-direction: row;
+}
+
+h2 {
+    color: #555;
+}
+
+h3 {
+    color: #007BFF;
+}
+
+/* Ссылки */
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Список */
+ul {
+    padding: 0;
+    list-style-type: none; /* Убираем маркеры списка */
+}
+
+li {
+    margin: 10px 0;
+}
+
+/* Таблица админки */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Кнопки */
+button, 
+a.button {
+    display: inline-block;
+    padding: 10px 15px;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+button:hover, 
+a.button:hover {
+    background-color: #218838;
+}
+
+/* Поля ввода - если есть на странице редактирования */
+input[type="text"], 
+input[type="datetime-local"], 
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Контейнер для основного контента */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Дополнительные стили для кнопок удаления и редактирования */
+.actions a {
+    margin-right: 10px;
+}

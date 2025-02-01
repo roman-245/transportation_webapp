@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html" lang="ru">
+<link rel="stylesheet" href="/style_home_blog.css">
+<head>
+    <title>Автоблог</title>
+</head>
+<body>
+<h1 class="blog blog__title_center">Автоблог</h1>
+<ul>
+    <li><a href="/">На главную</a></li>
+    <li><a href="/blog_admin">Административная панель</a></li>
+</ul>
+<div>
+    <h2>Все статьи блога</h2>
+    <ul>
+        <th:block th:each="post : ${listArticle}">
+            <li class="article marker">
+                <img class="article__image article__image_correct_size marker" th:src="@{'/images/articles_images/' + ${post.image}}" alt="Тут должно быть картинке, но ее тут нет. Увы."/>
+                <div>
+                    <h3 class="marker" th:text="${post.title}"></h3>
+                    <p class="marker">Автор: <span th:text="${post.author}"></span></p>
+                    <p class="marker">Дата публикации: <span th:text="${post.publishDate}"></span></p>
+                    <p class="article__text marker" th:text="${post.maintext}"></p>
+                    <div class="two-blocs"><a th:href="@{'blog_full_article/show/'+${post.id}}" class="article__redirect-button">Подробнее</a>
+<!--                        По кнопке перейти добавить редирект на тот же id что и статья.-->
+                        <div class="article__text-images">
+                            <a href="#"><img class="article__text-images-vk" src="/images/vk_color_white.svg" alt=""></a>
+                            <a href="#"><img class="article__text-images-ok" src="/images/odnoklacniki_color_white.svg" alt=""></a>
+                            <a href="#"><img class="article__text-images-ut" src="/images/youtube_color_white.svg" alt=""></a>
+                            <a href="#"><img class="article__text-images-tt" src="/images/tiktok_color_white.svg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </th:block>
+    </ul>
+</div>
+</body>
+</html>
